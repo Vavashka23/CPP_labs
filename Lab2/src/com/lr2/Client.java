@@ -1,10 +1,20 @@
 package com.lr2;
-
+/**
+ * Класс <b>Клиент</b>
+ * @author Vavashka23
+ * @version 1.0
+ */
 public class Client {
+    /**Поле имя*/
     private String name;
+    /**Поле-экземпляр банкомат*/
     private ATM atm;
     Money money;
 
+    /**
+     * Конструктор для создания экземпляра класс <b>Клиент</b>
+     * @param _name
+     */
     public Client(String _name) {
         this.name = _name;
     }
@@ -17,6 +27,10 @@ public class Client {
         return atm.checkPassword();
     }
 
+    /**
+     * Фенкция передачи денег клиенту
+     * @param _money
+     */
     public void takeMoney(Money _money) {
         this.money = _money;
     }

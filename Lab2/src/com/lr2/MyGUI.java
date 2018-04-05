@@ -5,6 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Класс <b>Мой ГУИ</b>, необходимый для создания графического интерфейса пользователя
+ * @author Vavashka23
+ * @version 1.0
+ */
 public class MyGUI extends JFrame {
     private JLabel moneyGetMess = new JLabel("Get your money!!!");
     private JButton withdrawMoney = new JButton("Withdraw money from the account");
@@ -18,6 +23,11 @@ public class MyGUI extends JFrame {
     private JButton okButton = new JButton("Check");
     private String password = new String();
     private boolean flag = true;
+
+    /**
+     * Конструктор для создания экземпляра класс <b>Мой ГУИ</b>
+     * @param _name
+     */
     public MyGUI(String _name) {
         super(_name);
         atm.setMoney(money);

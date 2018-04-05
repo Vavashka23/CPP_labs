@@ -1,16 +1,30 @@
 package com.lr2;
 
 import java.util.Random;
-
+/**
+ * Класс <b>Банкомат</b>
+ * @author Vavashka23
+ * @version 1.0
+ */
 public class ATM {
+    /**Поле банк*/
     private String Bank;
+    /**Поле деньги*/
     private Money money;
+    /**Поле клиент*/
     private Client client;
-
+    /**
+     * Конструктор для создания экземпляра класс <b>Банкомат</b>
+     * @param _bank
+     */
     public ATM(String _bank){
         this.Bank = _bank;
     }
 
+    /**
+     * Функция создания пароля
+     * @return новый пароль
+     */
     public String checkPassword() {
         String _password = new String();
         Random random = new Random(System.currentTimeMillis());
@@ -21,6 +35,10 @@ public class ATM {
         return _password;
     }
 
+    /**
+     * Функция отдачи денег клиенту
+     * @param client
+     */
     public void giveMoney(Client client) {
         money.setOwner(client.getName());
         client.takeMoney(money);
@@ -39,6 +57,10 @@ public class ATM {
         return Bank;
     }
 
+    /**
+     * Функция сеттер
+     * @param money
+     */
     public void setMoney(Money money) {
         this.money = money;
     }
