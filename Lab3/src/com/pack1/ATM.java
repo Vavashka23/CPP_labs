@@ -1,5 +1,7 @@
 package com.pack1;
 
+import com.pack3.Bank;
+
 import java.util.Random;
 /**
  * Класс <b>Банкомат</b>
@@ -7,18 +9,20 @@ import java.util.Random;
  * @version 1.0
  */
 public class ATM {
-    /**Поле банк*/
-    private String Bank;
+    /**Поле название банка*/
+    private String bankName;
     /**Поле деньги*/
     private Money money;
     /**Поле клиент*/
     private Client client;
+    /**Поле банк*/
+    private com.pack3.Bank bank;
     /**
      * Конструктор для создания экземпляра класс <b>Банкомат</b>
      * @param _bank
      */
     public ATM(String _bank){
-        this.Bank = _bank;
+        this.bankName = _bank;
     }
 
     /**
@@ -49,12 +53,10 @@ public class ATM {
         return client;
     }
 
-    public Money getMoney() {
-        return money;
-    }
+    public Money getMoney() { return money; }
 
     public String getBank() {
-        return Bank;
+        return bankName;
     }
 
     /**
@@ -65,11 +67,17 @@ public class ATM {
         this.money = money;
     }
 
-    public void setBank(String bank) {
-        Bank = bank;
+    public void setBank(String _bankName) {
+        bankName = _bankName;
     }
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public String requestForMoney(Bank _bank) {
+        if(_bank.takeRequestForMoney())
+            return _bank.giveMoneyFromBank(true);
+        else return _bank.giveMoneyFromBank(false);
     }
 }

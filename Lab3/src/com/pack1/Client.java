@@ -6,7 +6,7 @@ package com.pack1;
  */
 public class Client {
     /**Поле имя*/
-    private String name;
+    protected String name;
     /**Поле-экземпляр банкомат*/
     private ATM atm;
     Money money;

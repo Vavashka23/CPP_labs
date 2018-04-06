@@ -1,5 +1,5 @@
 package com.pack1;
-
+import com.pack3.Bank;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -23,6 +23,7 @@ public class MyGUI extends JFrame {
     private JButton okButton = new JButton("Check");
     private String password = new String();
     private boolean flag = true;
+    private Bank bank = new Bank("Vavashka's BANK");
 
     /**
      * Конструктор для создания экземпляра класс <b>My GUI</b>
@@ -33,7 +34,6 @@ public class MyGUI extends JFrame {
         atm.setMoney(money);
         setBounds(200, 200, 500,200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         client.setAtm(atm);
         password += client.getMoney();
         withdrawMoney.addActionListener(new getMoneyAction());
@@ -44,7 +44,8 @@ public class MyGUI extends JFrame {
         inputMess.setVisible(false);
         textField.setVisible(false);
         okButton.setVisible(false);
-        textArea.setBackground(Color.darkGray);
+        textArea.setBackground(Color.LIGHT_GRAY);
+        textArea.setDisabledTextColor(Color.BLACK);
         textArea.setEnabled(false);
 
         c.gridx = 0;
@@ -115,6 +116,7 @@ public class MyGUI extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if(password.equals(textField.getText()))
             {
+                textArea.setText(textArea.getText()+atm.requestForMoney(bank));
                 atm.giveMoney(client);
                 name.setText("New money owner: " + money.getOwner());
                 okButton.setVisible(false);
