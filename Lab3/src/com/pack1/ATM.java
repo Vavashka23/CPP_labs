@@ -15,8 +15,6 @@ public class ATM {
     private Money money;
     /**Поле клиент*/
     private Client client;
-    /**Поле банк*/
-    private com.pack3.Bank bank;
     /**
      * Конструктор для создания экземпляра класс <b>Банкомат</b>
      * @param _bank
@@ -75,6 +73,11 @@ public class ATM {
         this.client = client;
     }
 
+    /**
+     * Функция запроса денег у банка
+     * @param _bank
+     * @return сообщение о состоянии перевода
+     */
     public String requestForMoney(Bank _bank) {
         if(_bank.takeRequestForMoney())
             return _bank.giveMoneyFromBank(true);
