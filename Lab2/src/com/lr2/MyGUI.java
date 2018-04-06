@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Класс <b>Мой ГУИ</b>, необходимый для создания графического интерфейса пользователя
+ * Класс <b>My GUI</b>, необходимый для создания графического интерфейса пользователя
  * @author Vavashka23
  * @version 1.0
  */
@@ -25,7 +25,7 @@ public class MyGUI extends JFrame {
     private boolean flag = true;
 
     /**
-     * Конструктор для создания экземпляра класс <b>Мой ГУИ</b>
+     * Конструктор для создания экземпляра класс <b>My GUI</b>
      * @param _name
      */
     public MyGUI(String _name) {

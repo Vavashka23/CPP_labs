@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.lr2","l":"ATM"},{"p":"com.lr2","l":"Client"},{"p":"com.lr2","l":"Main"},{"p":"com.lr2","l":"Money"},{"p":"com.lr2","l":"MyGUI"},{"p":"com.lr2","l":"MyGUI.checkAction"},{"p":"com.lr2","l":"MyGUI.getMoneyAction"},{"p":"com.lr2","l":"PoorClient"},{"p":"com.lr2","l":"RichClient"},{"p":"com.lr2","l":"Student"}]
