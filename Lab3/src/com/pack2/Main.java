@@ -1,6 +1,4 @@
 package com.pack2;
-
-import com.pack1.*;
 /**
  * Класс <b>Мейн</b>, необходимый для создания окошка
  * @author Vavashka23

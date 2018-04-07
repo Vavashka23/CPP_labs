@@ -1,6 +1,7 @@
-package com.pack1;
+package com.pack3;
 
-import com.pack3.Bank;
+import com.pack1.Client;
+import com.pack1.Money;
 
 import java.util.Random;
 /**

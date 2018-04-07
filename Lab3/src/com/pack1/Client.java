@@ -1,4 +1,5 @@
 package com.pack1;
+import com.pack3.*;
 /**
  * Класс <b>Клиент</b>
  * @author Vavashka23
