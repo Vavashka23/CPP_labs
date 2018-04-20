@@ -5,7 +5,7 @@ import com.pack3.*;
  * @author Vavashka23
  * @version 1.0
  */
-public class Client {
+public abstract class Client {
     /**Поле имя*/
     protected String name;
     /**Поле-экземпляр банкомат*/

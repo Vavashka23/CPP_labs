@@ -44,7 +44,8 @@ public class MyGUI extends JFrame {
         inputMess.setVisible(false);
         textField.setVisible(false);
         okButton.setVisible(false);
-        textArea.setBackground(Color.darkGray);
+        textArea.setBackground(Color.lightGray);
+        textArea.setDisabledTextColor(Color.black);
         textArea.setEnabled(false);
 
         c.gridx = 0;
