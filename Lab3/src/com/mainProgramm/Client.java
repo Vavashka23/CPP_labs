@@ -1,5 +1,5 @@
-package com.pack1;
-import com.pack3.*;
+package com.mainProgramm;
+import com.BankStructure.*;
 /**
  * Класс <b>Клиент</b>
  * @author Vavashka23

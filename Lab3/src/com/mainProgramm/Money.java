@@ -1,4 +1,4 @@
-package com.pack1;
+package com.mainProgramm;
 
 /**
  * Класс <b>Деньги</b>, необходимый для хранения данных

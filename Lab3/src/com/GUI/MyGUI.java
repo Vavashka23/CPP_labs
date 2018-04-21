@@ -1,6 +1,6 @@
-package com.pack2;
-import com.pack1.*;
-import com.pack3.*;
+package com.GUI;
+import com.mainProgramm.*;
+import com.BankStructure.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

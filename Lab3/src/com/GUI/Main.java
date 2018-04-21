@@ -1,4 +1,4 @@
-package com.pack2;
+package com.GUI;
 /**
  * Класс <b>Мейн</b>, необходимый для создания окошка
  * @author Vavashka23

@@ -1,5 +1,5 @@
-package com.pack3;
-import com.pack1.Money;
+package com.BankStructure;
+import com.mainProgramm.Money;
 /**
  * Класс <b>Банк</b>, необходимый для одобрения перевода денег
  * @author Vavashka23

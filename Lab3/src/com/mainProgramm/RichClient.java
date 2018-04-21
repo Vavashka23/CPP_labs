@@ -1,4 +1,4 @@
-package com.pack1;
+package com.mainProgramm;
 
 /**
  * Класс <b>Богатый клиент</b>, необходимый для визуализации наследования в Java
