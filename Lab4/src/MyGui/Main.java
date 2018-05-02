@@ -1,6 +1,8 @@
 package MyGui;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -13,13 +15,14 @@ import javafx.stage.Stage;
 import Threads.*;
 
 public class Main extends Application {
-    @Override
+
     public void start(Stage primaryStage) throws Exception{
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(20));
         pane.setHgap(15);
         pane.setVgap(10);
 
+        MainThread mainThread = new MainThread();
         Label oldMen = new Label("Old men");
         oldMen.setTextFill(Color.web("#388422"));
         Label youngMen = new Label("Young men");
@@ -31,6 +34,8 @@ public class Main extends Application {
         TextArea textArea = new TextArea();
         textArea.setMaxSize(300,160);
         textArea.setDisable(true);
+
+
 
        // pane.setGridLinesVisible(true);
         GridPane.setHalignment(oldMen, HPos.CENTER);
@@ -48,11 +53,18 @@ public class Main extends Application {
         pane.add(deactivateButton, 1, 2);
 
 
-
         Scene scene = new Scene(pane, 530, 200);
         primaryStage.setTitle("Dial-up");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+      /*  callButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                mainThread.usePhone();
+                textArea.setText(textArea.getText() + "- Использование телефона(60 сек)");
+            }
+        });*/
     }
 
     public static void main(String[] args) {
