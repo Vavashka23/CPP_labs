@@ -64,8 +64,8 @@ public class Main extends Application {
 
 
 
-        int[] time = {30};
-        int[] time2 = {30};
+        int[] time = {0};
+        int[] time2 = {0};
         Timeline timeline = new Timeline(
                 new KeyFrame(
                         Duration.millis(1000),
@@ -88,14 +88,14 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent event) {
 
-                time[0] = 30;
-                mainThread.usePhone();
-                if(time2[0]==0) {
+                if(time2[0] == 0) {
+                    time[0] = 30;
+                    mainThread.usePhone();
                     textArea.setText(textArea.getText() + "- Использование телефона(30 сек)\n");
                     timeline.setCycleCount(30);
                     timeline.play();
                     phoneTimer.setText("30");
-                }
+                } else textArea.setText(textArea.getText() + "- Ожидайте завершения интернет соединения\n");
             }
         });
 
