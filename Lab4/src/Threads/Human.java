@@ -15,26 +15,40 @@ public class Human extends Thread{
     @Override
     public void run() {
         if(this.generation == 0) {
-            try {
-                while (true) {
-                    if(num == 1) call();
-
-                }
-            }catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        } else {
-
-        }
+                do {
+                    if (num == 1) call();
+                }while (num == 3);
+        } else if(this.generation == 1){
+            do {
+                if (num == 2) useInternet();
+            }while (num == 3);
+        } else System.out.println("Fatal error!!!");
         return;
     }
 
     public void call() {
-        point.check();
-
+        if(point.check() == 0 || point.check() == 1) {
+            point.internetAccess = false;
+            point.phoneAccess = false;
+            try {
+                wait(30000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+            point.phoneAccess = true;
+            point.internetAccess = true;
+        }
     }
 
     public void useInternet() {
-
+        if(point.check() == 0 || point.check() == 1) {
+            point.internetAccess = false;
+            try {
+                wait(30000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+            point.internetAccess = true;
+        }
     }
 }

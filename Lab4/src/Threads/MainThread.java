@@ -26,4 +26,8 @@ public class MainThread implements Runnable{
     public void usePhone() {
         old.num = 1;
     }
+
+    public void surfing() {
+        young.num = 2;
+    }
 }

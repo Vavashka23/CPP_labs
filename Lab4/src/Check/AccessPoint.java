@@ -1,8 +1,8 @@
 package Check;
 
 public class AccessPoint {
-    private boolean internetAccess;
-    private boolean phoneAccess;
+    public boolean internetAccess;
+    public boolean phoneAccess;
     public AccessPoint() {
         this.internetAccess = true;
         this.phoneAccess = true;
