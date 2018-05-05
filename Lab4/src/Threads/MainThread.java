@@ -14,12 +14,6 @@ public class MainThread implements Runnable{
     public void run() {
         old.start();
         young.start();
-        /*try {
-            old.join();
-            young.join();
-        } catch (InterruptedException ex) {
-            System.out.println("Ожидание завершения главного потока незакончено!");
-        }*/
         return;
     }
 

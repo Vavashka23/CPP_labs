@@ -98,12 +98,12 @@ public class Main extends Application {
             public void handle(ActionEvent event) {
 
                 if(time2[0] == 0) {
-                    time[0] = 30;
+                    time[0] = 15;
                     mainThread.usePhone();
-                    textArea.setText(textArea.getText() + "- Использование телефона(30 сек)\n");
-                    timeline.setCycleCount(30);
+                    textArea.setText(textArea.getText() + "- Использование телефона(15 сек)\n");
+                    timeline.setCycleCount(15);
                     timeline.play();
-                    phoneTimer.setText("30");
+                    phoneTimer.setText("15");
                 } else textArea.setText(textArea.getText() + "- Ожидайте завершения интернет соединения\n");
             }
         });
@@ -112,13 +112,14 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent event) {
 
-                time2[0] = 30;
-                mainThread.surfing();
-                if (new String(phoneTimer.getText()).equals("0")) {
-                    textArea.setText(textArea.getText() + "- Использование интернета(30 сек)\n");
-                    timeline2.setCycleCount(30);
+
+                if (new String(phoneTimer.getText()).equals("0") && new String(internetTimer.getText()).equals("0")) {
+                    time2[0] = 15;
+                    mainThread.surfing();
+                    textArea.setText(textArea.getText() + "- Использование интернета(15 сек)\n");
+                    timeline2.setCycleCount(15);
                     timeline2.play();
-                    internetTimer.setText("30");
+                    internetTimer.setText("15");
                 } else textArea.setText(textArea.getText() + "- Доступ к интернету заблокирован\n");
             }
         });

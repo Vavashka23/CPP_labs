@@ -56,7 +56,7 @@ public class Human extends Thread{
             point.internetAccess = false;
             point.phoneAccess = false;
             try {
-                Thread.sleep(30000);
+                Thread.sleep(15000);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
@@ -68,7 +68,7 @@ public class Human extends Thread{
             while(point.check() != 0)
             {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
@@ -77,7 +77,7 @@ public class Human extends Thread{
             point.internetAccess = false;
             point.phoneAccess = false;
             try {
-                Thread.sleep(30000);
+                Thread.sleep(15000);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
@@ -92,7 +92,7 @@ public class Human extends Thread{
             System.out.println("Начало использования интернета");
             point.internetAccess = false;
             try {
-                Thread.sleep(30000);
+                Thread.sleep(15000);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
