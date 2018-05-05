@@ -15,6 +15,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import Threads.*;
+import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 
 public class Main extends Application {
@@ -61,6 +62,14 @@ public class Main extends Application {
         primaryStage.setTitle("Dial-up");
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                try {
+                    stop();
+                } catch (Exception e) {}
+            }
+        });
 
 
 
@@ -116,7 +125,9 @@ public class Main extends Application {
         closeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                textArea.setText(textArea.getText() + "- Закрытие потоков\n");
+                mainThread.closeThreads();
+                primaryStage.close();
             }
         });
     }

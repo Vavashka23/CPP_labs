@@ -22,7 +22,10 @@ public class Human extends Thread{
                     System.out.println("Запрос на пользование телефоном");
                     call();
                     num = 0;
-                }
+                } else if (num == 3) {
+                    System.out.println("Завершение 1-го потока");
+                    return;
+                } else
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException ex) {}
@@ -35,7 +38,10 @@ public class Human extends Thread{
                     System.out.println("Запрос на пользование интернетом");
                     useInternet();
                     num = 0;
-                }
+                } else if (num == 3) {
+                    System.out.println("Завершение 2-го потока");
+                    return;
+                } else
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException ex) {}

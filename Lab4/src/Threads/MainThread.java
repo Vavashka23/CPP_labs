@@ -32,6 +32,7 @@ public class MainThread implements Runnable{
     }
 
     public void closeThreads() {
-
+        old.num = 3;
+        young.num = 3;
     }
 }
